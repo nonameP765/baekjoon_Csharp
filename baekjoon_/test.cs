@@ -18,12 +18,15 @@ namespace baekjoon
         static void Main(string[] args)
         {
             var input = Console.ReadLine();
-            var arrInput = input.Split();
-            var a = int.Parse(arrInput[0]) > int.Parse(arrInput[1]) ? int.Parse(arrInput[0]) : int.Parse(arrInput[1]);
-            var b = int.Parse(arrInput[0]) > int.Parse(arrInput[1]) ? int.Parse(arrInput[1]) : int.Parse(arrInput[0]);
-            var re = Uq(a, b);
-            Console.WriteLine(re);
-            Console.WriteLine(a / re * b);
+            for (var x = 0; x < int.Parse(input); x += 1)
+            {
+                var input_temp = Console.ReadLine();
+                var arrInput = input_temp.Split();
+                var a = int.Parse(arrInput[0]) > int.Parse(arrInput[1]) ? int.Parse(arrInput[0]) : int.Parse(arrInput[1]);
+                var b = int.Parse(arrInput[0]) > int.Parse(arrInput[1]) ? int.Parse(arrInput[1]) : int.Parse(arrInput[0]);
+                var re = Uq(a, b);
+                Console.WriteLine(a / re * b);
+            }
         }
     }
 }
